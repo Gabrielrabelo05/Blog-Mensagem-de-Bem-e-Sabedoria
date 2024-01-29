@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-image: url(../imgs/fundo-login.jpg) ;
+    background-image: url(../img/fundo-login.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;

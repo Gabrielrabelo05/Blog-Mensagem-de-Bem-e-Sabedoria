@@ -25,9 +25,10 @@
 async function fazerLogin() {
     const username = document.getElementById('usuario-log').value;
     const password = document.getElementById('senha-log').value;
-    
+    console.log(username)
     
     const url = `http://localhost:8080/perfil?username=${username}&password=${password}`;
+    // const url = "http://localhost:8080/perfil";
 
     const response = await fetch(url, {
         method: 'GET',

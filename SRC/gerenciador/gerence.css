@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body {
-    background-image: url(../imgs/fundo-post.png) ;
+    background-image: url(../img/fundo-post.png) ;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
