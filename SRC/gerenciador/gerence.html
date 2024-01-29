@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBS</title>
+    <link rel="stylesheet" href="gerence.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">      
+        <a href="#" class="logo">
+           <img  id="logo"   src="../imgs/logo.png"  alt="bms logo">
+        </a>  
+       <nav id="nav-box">               
+           <ul class="navbar-list">
+               <li class="nav-link">
+                   <a href="#home" class="navbar-link-hover-1" data-nav-toggler>Home</a>
+               </li>
+               <li class="nav-link">
+                   <a href="#Tópicos" class="navbar-link-hover-1" data-nav-toggler>Tópicos</a>
+               </li>
+               <li class="nav-link">
+                   <a href="#Recomendados" class="navbar-link-hover-1" data-nav-toggler>Recomendados</a>
+               </li>
+           </ul>
+       </nav>    
+       <a href="#post.html" class="bnt-link"><button class="nav-bnt" id="nav-btn" >Voltar</button></a>
+    </header>
+    <section id="sect-form">
+        <form id="select-config" action="">
+            <button type="submit" class="btn-config">Adicionar post</button>
+            <button type="submit" class="btn-config">Gerenciar postagem</button>
+        </form>
+        <form id="form-post" action="">
+            <h1 id="title-form-gerence">Gerenciar postagem</h1>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                          <th>Título</th>
+                          <th>Edit</th>
+                          <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td id="name-planilha">João</td>
+                          <td id="edit-planilha"><button type="submit" id="bt-edit-pla">Edit</button></td>
+                          <td id="delete-planilha"><button type="submit" id="bt-delete-pla">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <div class="footer-container">    
+            <div class="footer-section about">
+                <img src="../imgs/logo.png" alt="">
+                <div class="box-redes">
+                    <i class='bx bxl-instagram'></i>
+                    <i class='bx bxl-telegram' ></i>
+                    <i class='bx bxl-whatsapp' ></i>
+                </div>               
+            </div>
+            <div class="footer-section links">
+                <ul class="ul-footer">
+                    <li class="li-footer">Termos de uso</li>
+                    <li class="li-footer">Privacidade e política</li>
+                    <li class="li-footer">Ajuda</li>
+                </ul>
+            </div>
+            <div class="footer-section-contact">
+                <h2 class="contato">Contato MBS:</h2>
+                <h3 class="contato">(98) 99203-3090</h3>
+            </div>
+        </div>
+    </footer>
+    <script src="gerence.js"></script>
+</body>
+</html>

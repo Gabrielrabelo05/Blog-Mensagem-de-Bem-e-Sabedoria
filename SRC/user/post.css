@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(../imgs/fundo-post.png) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+#logo {
+    width: 100px;
+    height: 40px;
+    margin-left: 50px;
+}
+#nav-box {
+    display: flex;
+    align-items: center;
+}
+.navbar-list{
+    list-style:none ;
+}   
+.nav-link, .navbar-link-hover-1{
+    display: inline-block;
+    padding: 0px 40px;
+    font-family: 'Poppins';
+    font-weight: normal;
+    font-size: 20px;
+    color: #ffff;
+    text-decoration: none;
+}
+.navbar-list li a {
+    transition: all 0.3s ease 0s;
+}
+.navbar-list li a:hover {
+    color:#00F0FF  ;
+    transition: all 0.3s ease 0s;
+}
+#nav-btn {
+    padding: 9px 20px;
+    background-color:#26A6F4;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0px 50px 0px 0px;
+    color: white;
+    transition: 0.3s;
+}
+#nav-btn:hover {
+    background-color: #00F0FF;
+    transition: 0.3s;
+}
+#logo-post { 
+    padding: 20px 40px;
+    width: 200px;
+    height: 90px;
+}
+#sect-form {
+    width: 600px;
+    height: 400px;
+    background-color: #06324D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+#select-config {
+    display: flex;
+    width:35% ;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+.btn-config {
+    background-color: #196FA3;
+    width: 200px;
+    height: 70px;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    color: white;
+    border-radius: 0px 20px 0px 0px;
+    cursor: pointer;
+}
+.btn-config:hover {
+    background-color: #094A71;
+}
+#form-post {
+    margin-right: 50px;
+}
+#title-form {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15pt;
+    color: white;
+}
+.box-input-post {
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    position: relative;  
+} 
+ .input-post, ::placeholder {
+    background-color: #094A71;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;  
+    padding-left: 5px;
+}
+#select-post, ::placeholder {
+    background-color: #094A71;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    padding-left: 5px;
+}
+#btn-post {
+    background-color: #009FFF;
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+}
+#btn-post:hover {
+    background-color: #094A71;
+}
+footer {
+    background-color: #02131D;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: 60px;
+    font-family: 'poppins';
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.box-redes {
+    display: flex;
+    justify-content: center;
+
+}
+.bxl-instagram {
+    font-size: 30px;
+
+}
+.bxl-whatsapp {
+    font-size: 30px;
+    
+}
+.bxl-telegram {
+    font-size: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.footer-section {
+    margin: 10px;
+}
+
+.footer-section-contact {
+    color: #f8f8f8;
+}
+.contato {
+    font-weight: normal;
+    font-size: 13pt;
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: "poppins";
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    font-size: "poppins";
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
