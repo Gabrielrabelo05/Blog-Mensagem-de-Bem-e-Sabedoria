@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBS</title>
+    <link rel="stylesheet" href="post.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">      
+        <a href="#" class="logo">
+           <img  id="logo"   src="../imgs/logo.png"  alt="bms logo">
+        </a>  
+       <nav id="nav-box">               
+           <ul class="navbar-list">
+               <li class="nav-link">
+                   <a href="#home" class="navbar-link-hover-1" data-nav-toggler>Home</a>
+               </li>
+               <li class="nav-link">
+                   <a href="#Tópicos" class="navbar-link-hover-1" data-nav-toggler>Tópicos</a>
+               </li>
+               <li class="nav-link">
+                   <a href="#Recomendados" class="navbar-link-hover-1" data-nav-toggler>Recomendados</a>
+               </li>
+           </ul>
+       </nav>    
+       <a href="" class="bnt-link"><button class="nav-bnt" id="nav-btn" >Voltar</button></a>
+    </header>
+    <section id="sect-form">
+        <form id="select-config"  action="">
+            <button type="submit" class="btn-config">Adicionar post</button>
+            <button type="submit" class="btn-config">Gerenciar postagem</button>
+        </form>
+        <form id="form-post" action="">
+            <h1 id="title-form">Adicionar postagem</h1>
+            <div class="box-input-post">
+                <input class="input-post" type="text" placeholder="Título" required>
+            </div>         
+            <div class="box-input-post">
+                <select id="select-post">
+                    <option value="categoria" disabled selected >Categoria</option>
+                    <option value="valor2" >Valor 2</option>
+                    <option value="valor3">Valor 3</option>
+                    <option value="valor4">Valor 4</option>
+                </select>
+            </div>
+            <div class="box-input-post">
+                <input class="input-post" type="text" placeholder="Corpo" required>
+            </div>
+            <div class="box-input-post">
+                <input class="input-post" type="text" placeholder="Link do arquivo" required>
+            </div>
+            <button type="submit" id="btn-post">Publicar</button>
+        </form>
+    </section>
+    <footer>
+        <div class="footer-container">   
+            
+            <div class="footer-section about">
+                <img src="../imgs/logo.png" alt="">
+                <div class="box-redes">
+                    <i class='bx bxl-instagram'></i>
+                    <i class='bx bxl-telegram' ></i>
+                    <i class='bx bxl-whatsapp' ></i>
+                </div>               
+            </div>
+
+            <div class="footer-section links">
+                <ul class="ul-footer">
+                    <li class="li-footer">Termos de uso</li>
+                    <li class="li-footer">Privacidade e política</li>
+                    <li class="li-footer">Ajuda</li>
+                </ul>
+            </div>
+            <div class="footer-section-contact">
+                <h2 class="contato">Contato MBS:</h2>
+                <h3 class="contato">(98) 99203-3090</h3>
+            </div>
+        </div>
+    </footer>
+    <script src="post.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <main id="main-cadastro">
+        <img id="logo-cad" src="../imgs/logo.png" alt="">
+        <form id="sect-cad" name="form" onsubmit="validarFormulario()">
+            <h1 id="title-cad">Cadastro</h1>
+            <p id="txt-cad">Faça o cadastro para criar sua conta</p>
+            <div class="box-input">
+                <input class="input-login" type="email" id="email" name="email" placeholder="Email" required>
+                <i class='bx bx-envelope'></i>
+            </div>        
+            <div class="box-input">
+                <input class="input-login" id="ipt-user"  type="text" placeholder="Usuário" name="user"  required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <!-- <div class="box-input">
+                <input class="input-login" id="ipt-foto"  type="text" placeholder="Endereço de imagem"  id="foto" name="nome">
+                <i class='bx bx-image-alt'></i>
+            </div> -->
+            <div class="box-input">
+                <input class="input-login" type="password" id="senha" placeholder="Senha" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <button type="submit" id="btn-cadastro" onclick="criarConta()">Criar conta</button>
+        </form>
+    </main>
+    <script src="cadastro.js"></script>
+</body>
+</html>

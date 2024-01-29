@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url(../imgs/fundo-login.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-position: center;
+}
+#main-login {
+    height: 600px ;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 120px;
+}
+#logo-login, #logo-cad{
+    width: 151px;
+    height: 60px;
+    display: flex;
+    margin-bottom: 10px;
+}
+#sect-login {
+    display: flex;
+    height: 400px;
+    width: 500px;
+    background: transparent;
+    border: 2px solid rgba( 255,255 ,255 , .2 );
+    /* backdrop-filter: blur(130px); */
+    box-shadow: 0 0 10px rgba(0,0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    flex-direction: column;
+}
+#sect-cad {
+    display: flex;
+    height: 450px;
+    width: 500px;
+    background: transparent;
+    border: 2px solid rgba( 255,255 ,255 , .2 );
+    /* backdrop-filter: blur(130px); */
+    box-shadow: 0 0 10px rgba(0,0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    flex-direction: column; 
+}
+#title-entrar, #title-cad {
+    font-family: 'poppins', sans-serif;
+}
+#txt-login, #txt-cad {
+    font-family: 'poppins', sans-serif;
+    font-size: 10pt;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.box-input {
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    position: relative;      
+}
+.input-login {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba( 255,255 ,255 , .2 );
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.input-login::placeholder {
+  padding: 7px;
+  color: rgba(255, 255, 255, 0.319)
+}
+.input-login:hover {
+    border: 2px solid #009FFF;
+    transition: 0.3s;
+}
+.box-input i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+#btn-login {
+    background-color: #009FFF;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 40px;
+    margin-top: 25px;
+    font-size: 10pt;
+    transition: 0.2s;
+}
+#btn-login:hover {
+    background-color: #347196;
+    transition: 0.2s;
+}
+#cadrasto-user {
+    margin-top: 13px;
+    font-size: 8pt;
+}
+#link-register {
+    color: #009FFF;
+}
+#main-cadastro {
+    height: 600px ;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 120px;
+}
+#btn-cadastro {
+    background-color: #009FFF;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 45px;
+    margin-top: 20px;
+    font-size: 10pt;
+    transition: 0.2s;
+}
+#btn-cadastro:hover {
+    background-color: #347196;
+    transition: 0.2s;
+}
