@@ -1,0 +1,357 @@
+*{
+   margin: 0;
+   padding: 0;
+   font-family: 'Poppins' , "Libre Baskerville" ;
+   box-sizing: border-box;
+  
+}
+
+body {
+  background-image: url(./img/fundo\ de\ tela.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+ }
+
+li, a, button{
+   font-family: 'Poppins';
+   font-weight: 500;
+   font-size: 20px;
+   color: #ffff;
+   text-decoration: none;
+}
+
+header{
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   padding: 15px 60px;
+   margin: 0 auto;
+   max-width: 1100px;
+   width: 90%;
+
+
+}
+
+.logo{
+   cursor: pointer;
+   margin-right: auto;
+  
+}
+
+.navbar-list{
+list-style:none ;
+}
+
+.navbar-list li {
+   display: inline-block;
+   padding: 0px 30px;
+}
+
+.navbar-list li a {
+   transition: all 0.3s ease 0s;
+}
+
+.navbar-list li a:hover {
+   color:#00F0FF  ;
+}
+
+button{
+   padding: 9px 25px;
+   background: radial-gradient(1005% 141.52% at 88.29% 72.73%, rgba(43, 182, 222, 0.25) 0%, rgba(125, 214, 239, 0.25) 100%), radial-gradient(739.31% 110.45% at 35.14% 48.48%, #26A6F4 0%, rgba(12, 191, 231, 0.00) 100%);
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+   font-weight: bold;
+   transition: all 0.3s ease 0s;
+}
+
+
+#user-card{
+  display: flex;
+  flex-direction: column;
+}
+
+#coteiner-user{
+  color: #ffff;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 110px;
+  max-width: 1100px;
+  width: 90%;
+}
+#img-use{
+  width: 160px;
+  position: absolute;
+}
+
+#txt-user{
+  font-size: 15px;
+  display: flex;
+  margin-left: 110px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 1050px;
+  height: 140px;
+  background-color: #023351;
+  border-radius: 0px 20px 20px 0px;
+}
+
+#abaut-user {
+  color: #ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 30px 0;
+  margin-left: 340px;
+ 
+}
+
+#abaut-user-colum1,
+#abaut-user-colum2 {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+
+}
+
+#abaut-user-colum1 p {
+  display: flex;
+  margin-right: 50px;
+  margin-bottom: 10px;
+  font-weight: 600px ;
+}
+
+#abaut-user-colum2 h6 {
+  margin-right: 110px;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+#card-user-post{
+  display: flex;
+  justify-content: center;
+  color: #ffff;
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 1100px;
+  width:90% ;
+}
+
+#img-config{
+  height: 460px;
+  width: 900px;
+}
+
+#titulo-tunbnail{
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1.5px;
+}
+.h{
+  width: 60%;
+  height: 5%;
+  margin: 0 auto;
+  margin-top: 0.8%;
+  border-radius: 5px
+}
+.conteiner-txt-esterno{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  color: #ffff;
+  max-width: 110%;
+  
+}
+.post-txt-content{
+  text-align-last: left;
+  margin-top: 16px;
+  padding: 0px 350px 0px 350px;
+  font-size: medium;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  line-height: 150%
+}
+#conteudo-autor-id{
+display: flex;
+text-align: center;
+justify-content: center;
+margin-top: 2%;
+font-weight: bold;
+color:#00F0FF  ; 
+}
+
+.card{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(217deg, rgba(233, 214, 214, 0.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(84, 126, 148, 0.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(9, 36, 48, 0.8), rgba(0,0,255,0) 70.71%);
+  border: 2px solid rgb(255,255,255,.3);
+  height: 340px;
+  width: 370px;
+  border-radius: 10px;
+ 
+  
+
+  
+}
+.conteiner-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ }
+
+.cards-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5%;
+  justify-content: center;
+  padding: 100px 0;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.img-card img{
+  width: 320px;
+ height: 240px; 
+  position: relative;
+  display: flex;
+  align-items: center;
+  top: 20px;
+}  
+.imgDEsc-card{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  position: absolute;
+  width: 100%; /* Ocupar a largura total da imagem */
+  top: 192px;
+  margin: 5px;
+}
+.imgDEsc-card h4{
+  font-size: 13px;
+}
+
+
+#descTopis{
+  width: 130px;
+  border-radius: 5px;
+  background-color: #052426e0;
+  height: 23px;
+  text-align: center;
+}
+
+.cardperfil{
+  width: 100%;
+  height: max-content;
+  display: flex;
+  padding: 30px 0px 0px 25px;
+  
+}
+
+.name-card{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 0px 0px 10px;
+}
+ #usercard{
+  font-weight: normal;
+}
+
+.hora-card{
+  display: flex;
+  justify-content: center;
+  flex-direction:column ;
+  margin-left: 25px;
+}
+
+#hrs-card{
+  font-weight: normal;
+  font-size: 10px;
+}
+#data-card{
+  font-weight: normal;
+  font-size: 10px;
+
+}
+
+
+
+
+
+footer {
+  background-color: #02131D;
+  color: #fff;
+  padding: 20px 0;
+  width: 100%;
+  font-family: 'poppins';
+  position:absolute;
+  margin-top: 5%;
+}
+
+.footer-container-user-pg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+.box-redes {
+  display: flex;
+  justify-content: center;
+
+}
+.bxl-instagram {
+  font-size: 30px;
+
+}
+.bxl-whatsapp {
+  font-size: 30px;
+  
+}
+.bxl-telegram {
+  font-size: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.footer-section {
+  margin: 10px;
+}
+
+.footer-section-contact {
+  color: #f8f8f8;
+}
+.contato {
+  font-weight: normal;
+  font-size: 13pt;
+}
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: "poppins";
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  font-size: "poppins";
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+} 
