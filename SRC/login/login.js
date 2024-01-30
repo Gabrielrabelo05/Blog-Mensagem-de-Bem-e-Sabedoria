@@ -46,43 +46,111 @@
 //     }
 // }
 
-const username = document.getElementById('username').value;
-const password = document.getElementById('password').value;
+
+
+
+
+
+
+// const username = document.getElementById('username');
+// const password = document.getElementById('password');
+
+// function validarForm() {
+//     if (username.value == "") {
+//         alert("endereço de email invalido")
+//         return false
+//     }
+//     if (password.value, 1, 9) {
+//         alert("A senha precisa ter entre 1 e 8 caracteres")
+//         return false
+//     }
+//     return true
+// }
+// async function auth(){
+//     if(validarForm()){
+//         const user = {
+//             "dataSearchName" : username.value,
+//             "dataSearchPassword" : password.value
+//         }
+//             const respo = await authUser(user)
+//             .then(promise => {
+//                 if(promise.status == 404) alert(promise.message);
+//                 if(promise.status == 401) alert(promise.message)
+
+//                 console.log(promise);          
+//             }) 
+//     }
+// }
+
+// document.querySelector("form").onsubmit = (event) => {
+//     event.preventDefault()
+//     auth();
+//     console.log("gsw")
+// }
+// async function authUser(obj){
+//     const header =
+//     { 
+//         headers: { "Content-Type": "application/json", 
+//         Accept: "application/json" },
+//         method: "POST",
+//         body : JSON.stringify(obj)
+//     }
+//         const enviar = await fetch('http://localhost:8080/perfil/login',header).then(promise => promise.json())
+//         return enviar
+// }
+
+
+const username = document.getElementById('usuario-log');
+const password = document.getElementById('senha-log');
 
 function validarForm() {
-    if (username.value == "") {
-        alert("endereço de email invalido")
-        return false
+    if (username.value === "") {
+        alert("Endereço de email inválido");
+        return false;
     }
-    if (password.value, 1, 9) {
-        alert("A senha precisa ter entre 1 e 8 caracteres")
-        return false
+    if (password.value.length < 1 || password.value.length > 8) {
+        alert("A senha precisa ter entre 1 e 8 caracteres");
+        return false;
     }
-    return true
+    return true;
 }
-async function auth(){
-    if(validarForm()){
-        const user = {
-            "dataSearchName" : username.value,
-            "dataSearchPassword" : password.value
-        }
-            const respo = await authUser(user)
-            .then(promise => {
-                if(promise.status == 404) alert(promise.message);
-                if(promise.status == 401) alert(promise.message)
 
-                console.log(promise);          
-            }) 
+async function auth() {
+    if (validarForm()) {
+        const user = {
+            "dataSearchName": username.value,
+            "dataSearchPassword": password.value
+        };
+
+        try {
+            const response = await authUser(user);
+            if (response.status === 404) {
+                alert(response.message);
+            }
+            if (response.status === 401) {
+                alert(response.message);
+            }
+            console.log(response);
+        } catch (error) {
+            console.error(error);
+        }
     }
 }
-async function authUser(obj){
-    const header =
-    { 
-        headers: { "Content-Type": "application/json", 
-        Accept: "application/json" },
+
+document.querySelector("form").onsubmit = (event) => {
+    event.preventDefault();
+    auth();
+};
+
+async function authUser(obj) {
+    const header = {
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
         method: "POST",
-        body : JSON.stringify(obj)
-    }
-        const enviar = await fetch('http://localhost:8080/perfil/login',header).then(promise => promise.json())
-        return enviar
+        body: JSON.stringify(obj)
+    };
+
+    const response = await fetch('http://localhost:8080/perfil/login', header);
+    const data = await response.json();
+
+    return data;
 }
