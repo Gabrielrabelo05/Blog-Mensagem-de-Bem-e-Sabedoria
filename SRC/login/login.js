@@ -1,46 +1,59 @@
-// async function fazerLogin() {
-//     const username = document.getElementById('username').value;
-//     const password = document.getElementById('password').value;
-    
 
-//     const url = "http://localhost:8080/perfil";
-//     const data = { username, password };
-//    
-//     const response = await fetch(url, {
-//         method: 'GET',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify(data)
-//     });
+const username = document.getElementById('usuario-log');
+const password = document.getElementById('senha-log');
 
-//     const result = await response.json();
+function validarForm() {
+    if (username.value === "") {
+        alert("Endereço de email inválido");
+        return false;
+    }
+    if (password.value.length < 1 || password.value.length > 8) {
+        alert("A senha precisa ter entre 1 e 8 caracteres");
+        return false;
+    }
+    return true;
+}
 
-//     if (result.status === 'ok') {
-//         alert('Login bem-sucedido');
-//     } else {
-//         alert('Usuário ou senha incorretos');
-//     }
-// }
-async function fazerLogin() {
-    const username = document.getElementById('usuario-log').value;
-    const password = document.getElementById('senha-log').value;
-    
-    
-    const url = `http://localhost:8080/perfil?username=${username}&password=${password}`;
+async function auth() {
+    if (validarForm()) {
+        const user = {
+            "username": username.value,
+            "password": password.value
+        };
 
-    const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
+        try {
+            const response = await authUser(user);
+            if (response.status === 404) {
+                alert(response.message);
+            }
+            if (response.status === 401) {
+                alert(response.message);
+            }
+            console.log('yedfdue3d');
+        } 
+        catch (error) {
+            console.log(error);
         }
-    });
-
-    const result = await response.json();
-    
-    if (result.status === 'ok') {
-        console.log('Login bem-sucedido');
-    } else {
-        console.log('Usuário ou senha incorretos');
     }
 }
+
+document.querySelector("form").onsubmit = (event) => {
+    event.preventDefault();
+    auth();
+};
+
+async function authUser(obj) {
+    
+    const header = {
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        method: "POST",
+        body: JSON.stringify(obj)
+    };
+    
+    const response = await fetch('http://localhost:8080/perfil/login', header);
+    console.log("test")
+    const data = await response.json();
+    return data;
+}
+
+
