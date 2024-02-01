@@ -1,59 +1,44 @@
+function fazerLogin(username, password) {
+    // console.log(username, password);
+    const apiUrl = 'http://localhost:8080/perfil/login';
 
-const username = document.getElementById('usuario-log');
-const password = document.getElementById('senha-log');
-
-function validarForm() {
-    if (username.value === "") {
-        alert("Endereço de email inválido");
-        return false;
-    }
-    if (password.value.length < 1 || password.value.length > 8) {
-        alert("A senha precisa ter entre 1 e 8 caracteres");
-        return false;
-    }
-    return true;
-}
-
-async function auth() {
-    if (validarForm()) {
-        const user = {
-            "username": username.value,
-            "password": password.value
-        };
-
-        try {
-            const response = await authUser(user);
-            if (response.status === 404) {
-                alert(response.message);
-            }
-            if (response.status === 401) {
-                alert(response.message);
-            }
-            console.log('yedfdue3d');
-        } 
-        catch (error) {
-            console.log(error);
-        }
-    }
-}
-
-document.querySelector("form").onsubmit = (event) => {
-    event.preventDefault();
-    auth();
-};
-
-async function authUser(obj) {
-    
-    const header = {
-        headers: { "Content-Type": "application/json", "Accept": "application/json" },
-        method: "POST",
-        body: JSON.stringify(obj)
+    const dados = {
+        username: username,
+        password: password
     };
-    
-    const response = await fetch('http://localhost:8080/perfil/login', header);
-    console.log("test")
-    const data = await response.json();
-    return data;
+
+    const configuracao = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dados)
+    };
+
+    fetch(apiUrl, configuracao)
+        .then(function (resposta) {
+            if (resposta.ok) {
+                alert("Login bem-sucedido");
+            } else {
+                return resposta.text().then(function (mensagemErro) {
+                    alert(`Erro no login: ${mensagemErro}`);
+                });
+            }
+        })
+        .catch(function (error) {
+            console.error("Erro ao realizar o login:", error);
+        });
 }
+
+let form = document.querySelector("#sect-login");
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let login = document.querySelector("#usuario-log").value;
+    let senha = document.querySelector("#senha-log").value;
+
+    fazerLogin(login, senha);
+});
 
 
