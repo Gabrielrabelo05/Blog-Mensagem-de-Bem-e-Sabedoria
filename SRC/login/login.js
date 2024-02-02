@@ -1,5 +1,4 @@
 function fazerLogin(username, password) {
-    // console.log(username, password);
     const apiUrl = 'http://localhost:8080/perfil/login';
 
     const dados = {
